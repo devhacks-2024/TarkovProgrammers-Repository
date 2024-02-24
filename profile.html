@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src='https://cdn.plot.ly/plotly-2.29.1.min.js'></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TarkoProgrammers Present</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">Calculator</a>
+                <a href="#services">Profile</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="centered-content">
+            <h1>Welcome </h1>
+            <p>dfsdfsdfadsUt velit est quam doldfsor ad a aliquid quisdfsdfdsf aliquid. Sequi ea ut et est dfsdfsdfsdfquaerat sequi in dsfsdfsdfsdfoluptatem. Esse doloremque accusamus repellendfsdfsdfsdfdus deleniti vel. Minus et sesdfdsfsdfdsfd tempora.</p>
+            <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        var trace1 = {
+  type: 'bar',
+  x: [1, 2, 3, 4],
+  y: [5, 10, 2, 8],
+  marker: {
+      color: '#71c77b',
+      line: {
+          width: 2
+      }
+  }
+};
+var data = [ trace1 ];
+var layout = { 
+  title: 'Responsive to window\'s size!',
+  font: {size: 18}
+};
+var config = {responsive: true}
+Plotly.newPlot('myDiv', data, layout, config );
+    </script>
+    <script>
+        var data = [{
+  values: [19, 26, 55],
+  labels: ['Emission from Car ', 'Emission from House', 'Emission from Flight'],
+  type: 'pie'
+}];
+
+var layout = {
+  height: 400,
+  width: 500
+};
+
+Plotly.newPlot('myDiv2', data, layout);
+    </script>
+        </div>
+
+    </main>
+</body>
